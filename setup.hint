@@ -1,0 +1,6 @@
+category: Net
+requires: libboost1.43 libgcc1 libopenssl098 libQtCore4 libQtDBus4 libQtGui4 libQtNetwork4 libQtXml4 libstdc++6 libtorrent-rasterbar5
+sdesc: "Qt4 BitTorrent client"
+ldesc: "The qBittorrent project aims to provide a Free Software 
+alternative to µtorrent. qBittorrent is based on Qt4 toolkit and 
+libtorrent-rasterbar."

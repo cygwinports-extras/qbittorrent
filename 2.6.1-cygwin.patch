@@ -1,0 +1,29 @@
+--- origsrc/qbittorrent-2.6.1/src/main.cpp	2011-01-10 11:36:17.000000000 -0600
++++ src/qbittorrent-2.6.1/src/main.cpp	2011-01-11 01:11:53.186669500 -0600
+@@ -53,7 +53,7 @@
+ #endif
+ 
+ #include "qinisettings.h"
+-#if defined(Q_WS_X11) || defined(Q_WS_MAC)
++#if defined(Q_WS_X11) && !defined(Q_OS_CYGWIN) || defined(Q_WS_MAC)
+ #include <signal.h>
+ #include <execinfo.h>
+ #include "stacktrace.h"
+@@ -117,7 +117,7 @@ public:
+ 
+ #include "main.moc"
+ 
+-#if defined(Q_WS_X11) || defined(Q_WS_MAC)
++#if defined(Q_WS_X11) && !defined(Q_OS_CYGWIN) || defined(Q_WS_MAC)
+ void sigintHandler(int) {
+   signal(SIGINT, 0);
+   qDebug("Catching SIGINT, exiting cleanly");
+@@ -284,7 +284,7 @@ int main(int argc, char *argv[]){
+ #ifndef DISABLE_GUI
+   app.setQuitOnLastWindowClosed(false);
+ #endif
+-#if defined(Q_WS_X11) || defined(Q_WS_MAC)
++#if defined(Q_WS_X11) && !defined(Q_OS_CYGWIN) || defined(Q_WS_MAC)
+   signal(SIGABRT, sigabrtHandler);
+   signal(SIGTERM, sigtermHandler);
+   signal(SIGINT, sigintHandler);
