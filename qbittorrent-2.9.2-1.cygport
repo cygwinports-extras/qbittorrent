@@ -5,4 +5,4 @@ HOMEPAGE="http://qbittorrent.sourceforge.net/"
 SRC_URI="mirror://sourceforge/qbittorrent/${P}.tar.gz"
 PATCH_URI="2.6.1-cygwin.patch"
 
-CYGQMAKE4_ARGS="PREFIX=/usr"
+CYGQMAKE4_ARGS="PREFIX=/usr MANPREFIX=/usr/share"
