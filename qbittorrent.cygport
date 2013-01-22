@@ -1,0 +1,14 @@
+inherit qt4-qmake
+
+NAME="qbittorrent"
+VERSION=3.0.8
+RELEASE=1
+CATEGORY="Net"
+SUMMARY="Qt4 BitTorrent client"
+DESCRIPTION="The qBittorrent project aims to provide a Free Software alternative
+to µtorrent. qBittorrent is based on Qt4 toolkit and libtorrent-rasterbar."
+HOMEPAGE="http://qbittorrent.sourceforge.net/"
+SRC_URI="mirror://sourceforge/qbittorrent/${P}.tar.gz"
+PATCH_URI="2.6.1-cygwin.patch"
+
+CYGQMAKE4_ARGS="PREFIX=/usr MANPREFIX=/usr/share"
