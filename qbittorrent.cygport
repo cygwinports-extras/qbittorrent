@@ -1,7 +1,7 @@
 inherit qt4-qmake
 
 NAME="qbittorrent"
-VERSION=3.1.9.2
+VERSION=3.1.12
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Qt4 BitTorrent client"
